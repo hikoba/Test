@@ -42,7 +42,7 @@ def alert_received():
     # customize the behaviour of the bot here
 #    message = "Hi, I am a Webex Teams bot. Have a great day ☀! "
 #    message = raw_json['version']
-    if 'raw_json['dnacIP']'' in locals():
+    if 'raw_json['dnacIP']' in locals():
         message = '<@all>\r\n';
         message += raw_json['dnacIP'] + 'からアラートが通知されています \r\n';
         message += 'イベントID:' + raw_json['eventId'] + '\r\n';
