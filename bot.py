@@ -36,10 +36,11 @@ api = WebexTeamsAPI(access_token=WT_BOT_TOKEN)
 @app.route('/', methods=['POST'])
 def alert_received():
     raw_json = request.get_json()
-    print(raw_json)
+#    print(raw_json)
 
     # customize the behaviour of the bot here
-    message = "Hi, I am a Webex Teams bot. Have a great day ☀! " + raw_json
+#    message = "Hi, I am a Webex Teams bot. Have a great day ☀! "
+    message = raw_json
 
     # uncomment if you are implementing a notifier bot
 
