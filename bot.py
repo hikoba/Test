@@ -39,7 +39,7 @@ def alert_received():
     print(raw_json)
 
     # customize the behaviour of the bot here
-    message = "Hi, I am a Webex Teams bot. Have a great day ☀! "
+    message = "Hi, I am a Webex Teams bot. Have a great day ☀! " + raw_json
 
     # uncomment if you are implementing a notifier bot
 
