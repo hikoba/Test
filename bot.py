@@ -15,6 +15,7 @@ or implied.
 from flask import Flask, request, jsonify
 from webexteamssdk import WebexTeamsAPI
 import os
+import json
 
 # get environment variables
 #WT_BOT_TOKEN = os.environ['WT_BOT_TOKEN']
@@ -41,12 +42,16 @@ def alert_received():
     # customize the behaviour of the bot here
 #    message = "Hi, I am a Webex Teams bot. Have a great day ☀! "
 #    message = raw_json['version']
-    message = '<@all>\r\n';
-    message += raw_json['dnacIP'] + 'からアラートが通知されています \r\n';
-    message += '**イベントID:**' + raw_json['eventId'] + '\r\n';
-    message += '**シビリティ:**' + str(raw_json['severity']) + '\r\n';
-    message += '**問題の概要:**' + raw_json['description'] + '\r\n';
-    message += '**詳細情報のリンク:**' + raw_json['ciscoDnaEventLink'] ;
+    if 'raw_json['dnacIP']'' in locals():
+        message = '<@all>\r\n';
+        message += raw_json['dnacIP'] + 'からアラートが通知されています \r\n';
+        message += 'イベントID:' + raw_json['eventId'] + '\r\n';
+        message += 'シビリティ:' + str(raw_json['severity']) + '\r\n';
+        message += '問題の概要:' + raw_json['description'] + '\r\n';
+        message += '詳細情報のリンク:' + raw_json['ciscoDnaEventLink'] ;
+    else:
+        message = json.dumps(raw_json)
+
 
     # uncomment if you are implementing a notifier bot
 
