@@ -17,10 +17,12 @@ from webexteamssdk import WebexTeamsAPI
 import os
 
 # get environment variables
-WT_BOT_TOKEN = os.environ['WT_BOT_TOKEN']
+#WT_BOT_TOKEN = os.environ['WT_BOT_TOKEN']
+WT_BOT_TOKEN = 'OTcyMzcwMTYtNmQwNC00ODk0LWIzMGQtMTMxNzNhNmQ0NmY5OTQ4ZDIyZTMtNzE4_PF84_1eb65fdf-9643-417f-9974-ad72cae0e10f'
 
 # uncomment next line if you are implementing a notifier bot
-WT_ROOM_ID = os.environ['WT_ROOM_ID']
+#WT_ROOM_ID = os.environ['WT_ROOM_ID']
+WT_ROOM_ID = 'Y2lzY29zcGFyazovL3VzL1JPT00vOGQ4ZmU3NjAtZDViNC0xMWViLTg3OTItZWQ5ZDVkMDdlY2Iw'
 
 # uncomment next line if you are implementing a controller bot
 #WT_BOT_EMAIL = os.environ['WT_BOT_EMAIL']
