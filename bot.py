@@ -41,9 +41,12 @@ def alert_received():
     # customize the behaviour of the bot here
 #    message = "Hi, I am a Webex Teams bot. Have a great day ☀! "
 #    message = raw_json['version']
-    message = '<@all>,# markdownが使えます \r\n';
-    message += 'こんなふうに \r\n';
-    message += '**書けます**';
+    message = '<@all>\r\n';
+    message += raw_json['dnacIP'] + 'からアラートが通知されています \r\n';
+    message += '**イベントID:**' + raw_json['eventId'] + '\r\n';
+    message += '**シビリティ:**' + raw_json['severity'] + '\r\n';
+    message += '**問題の概要:**' + raw_json['description'] + '\r\n';
+    message += '**詳細情報のリンク:**' + raw_json['ciscoDnaEventLink'] ;
 
     # uncomment if you are implementing a notifier bot
 
