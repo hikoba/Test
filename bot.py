@@ -41,9 +41,9 @@ def alert_received():
     # customize the behaviour of the bot here
 #    message = "Hi, I am a Webex Teams bot. Have a great day ☀! "
 #    message = raw_json['version']
-    markdown = '# markdownが使えます \r\n';
-    markdown += 'こんなふうに \r\n';
-    markdown += '**書けます**';
+    message = '<@all>,# markdownが使えます \r\n';
+    message += 'こんなふうに \r\n';
+    message += '**書けます**';
 
     # uncomment if you are implementing a notifier bot
 
