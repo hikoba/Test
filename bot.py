@@ -44,7 +44,7 @@ def alert_received():
     message = '<@all>\r\n';
     message += raw_json['dnacIP'] + 'からアラートが通知されています \r\n';
     message += '**イベントID:**' + raw_json['eventId'] + '\r\n';
-    message += '**シビリティ:**' + raw_json['severity'] + '\r\n';
+    message += '**シビリティ:**' + str(raw_json['severity']) + '\r\n';
     message += '**問題の概要:**' + raw_json['description'] + '\r\n';
     message += '**詳細情報のリンク:**' + raw_json['ciscoDnaEventLink'] ;
 
